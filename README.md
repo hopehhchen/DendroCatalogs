@@ -5,6 +5,7 @@ This is to store the derived property catalogs of Dendrogram features, based on 
 * The setup parameters of the Dendrogram algorithm used to identify the "features" in these catalogs are chosen to be the same as Friesen et al. (2016).
 * The velocity gradient fitting and the estimation of the specific angular momentum ("j") are based on Goodman et al. (1993).  The same methods are also used by Dib et al. (2010) and Yen et al. (2011).
 * The `astrodendro` package is used.  See http://dendrograms.org for details.
+* The `SCIMES` package is used. See http://scimes.readthedocs.io for details.
 * The catalogs are csv files produced by the `pandas` package, from `pandas.DataFrame` objects.
 
 ## Use the Catalogs
