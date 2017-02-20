@@ -9,6 +9,7 @@ This is to store the derived property catalogs of Dendrogram features, based on 
 
 ## Use the Catalogs
 The column keys and the corresponding physical quantities are as follows:
+
 1. `ID`: the ID assigned by the `astrodendro` package to each of the dendrogram feature.
 2. `RA`: the right ascension of the intensity-weighted centroid. [deg.]
 3. `Dec`: the declination of the intensity-weighted centroid. [deg.]
@@ -31,10 +32,12 @@ The column keys and the corresponding physical quantities are as follows:
 20. `m_lin_vir`: the virial linear "mass."  This is estimated according to Equation 4 in Friesen et al. (2016). [M$_\odot$ pc$^{-1}$]
 21. `virial_lin`: the linear virial parameter, which is simply `m_lin_vir` divided by `m_lin`. [dimensionless]
 22. Four different identifiers for the dendrogram features:
+
 	* `id_unresolved`: indicating an unresolved dendrogram feature.  That is, the feature has a projected area smaller than a beam size and a "width" in velocity less than two velocity channels.
 	* `id_resolvedLeaves`: indicating a resolved leaf structure.  A leaf structure is a dendrogram feature that cannot be further divided into smaller pieces according to the setup parameters.
 	* `id_resolvedBranches`: indicating a resolved branch structure.  A branch structures is a dendrogram feature that *can* be further divided.  The above three (boolean) indicators are mutually exclusive.
 	* `id_SCIMES`: the dendrogram ID of the bottom most dendrogram feature that connects all dendrogram features that are recognized by the `SCIME` package to belong to the same "cluster."  See http://scimes.readthedocs.id for more information.
+	
 23. `abundance_pNH3`: the total NH$_3$ mass derived from the property map divided by the Herschel-based total mass. [dimensionless]
 
 ***For L1688 in Ophiuchus ONLY***, the numbers of c2d and SCUBA2 sources within the projection of each dendrogram feature are also calculated.  They are in `count_c2d` and `count_SCUBA2`.
