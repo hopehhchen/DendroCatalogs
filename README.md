@@ -46,3 +46,6 @@ The column keys and the corresponding physical quantities are as follows:
 ## Version Notes
 * The current version is not by any means final products.
 * The code(s) used to derive the property catalogs will be made public after testing.
+
+## Contact
+This repo is currently maintained by Hope H. Chen.  Please contact hhchen@cfa.harvard.edu if you have any questions/suggestions/requests.
