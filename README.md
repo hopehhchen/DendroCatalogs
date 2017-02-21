@@ -1,10 +1,11 @@
 # DendroCatalogs
-This is to store the derived property catalogs of Dendrogram features, based on the DR1 data from the GBT Ammonia Survey (Friesen &amp; Pineda, et al., 2017).
+This is to store the derived property catalogs of Dendrogram features, based on the DR1 data from the GBT Ammonia Survey (Friesen and Pineda, et al., 2017).
 
 ## Technical Notes
 * The setup parameters of the Dendrogram algorithm used to identify the "features" in these catalogs are chosen to be the same as Friesen et al. (2016).
-* The velocity gradient fitting and the estimation of the specific angular momentum ("j") are based on Goodman et al. (1993).  The same methods are also used by Dib et al. (2010) and Yen et al. (2011).
-* The `astrodendro` package is used.  See http://dendrograms.org for details.
+* The velocity gradient fitting and the estimation of the specific angular momentum ("j") are based on Goodman et al. (1993).  The same methods are also used by Dib et al. (2010) and Yen et al. (2011), except different assumptions about the inclination.
+* The `astrodendro` package is used to identify features.  See http://dendrograms.org for details.
+* The `SCIMES` package is used to cluster dendrogram features.  See http://scimes.readthedocs.io for details.
 * The catalogs are csv files produced by the `pandas` package, from `pandas.DataFrame` objects.
 
 ## Use the Catalogs
@@ -43,6 +44,11 @@ The column keys and the corresponding physical quantities are as follows:
 25. `Tdust`: the dust temperature from the Herschel SED fit, averaged over the projection of each dendrogram feature. [K]
 
 ***For L1688 in Ophiuchus ONLY***, the numbers of c2d and SCUBA2 sources within the projection of each dendrogram feature are also calculated.  They are in `count_c2d` and `count_SCUBA2`.
+
+## Glue the Catalogs
+Using `Glue` to explore the data is highly recommended.  See http://glueviz.org for information about installation and data exploration.
+
+When opening the catalogs from within `Glue`, please select "Pandas Table" in the drop-down file type menu.
 
 ## Version Notes
 * The current version is not by any means final products.
