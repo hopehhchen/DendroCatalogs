@@ -37,7 +37,7 @@ The column keys and the corresponding physical quantities are as follows:
 	* `id_unresolved`: indicating an unresolved dendrogram feature.  That is, the feature has a projected area smaller than a beam size and a "width" in velocity less than two velocity channels.
 	* `id_resolvedLeaves`: indicating a resolved leaf structure.  A leaf structure is a dendrogram feature that *cannot* be further divided into smaller pieces according to the setup parameters.
 	* `id_resolvedBranches`: indicating a resolved branch structure.  A branch structures is a dendrogram feature that *can* be further divided.  The above three (boolean) indicators are mutually exclusive.
-	* `id_SCIMES`: the dendrogram ID of the bottom most dendrogram feature that connects all dendrogram features that are recognized by the `SCIME` package to belong to the same "cluster."  See http://scimes.readthedocs.id for more information.
+	* `id_SCIMES`: the dendrogram ID of the bottom most dendrogram feature that connects all dendrogram features that are recognized by the `SCIME` package to belong to the same "cluster."  See http://scimes.readthedocs.io for more information.
 
 23. `abundance_pNH3`: the total NH_3 mass derived from the property map divided by the Herschel-based total mass. [dimensionless]
 24. `Tkin`: the kinetic temperature from the NH_3 fit, averaged over the projection of each dendrogram feature. [K]
