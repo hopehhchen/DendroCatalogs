@@ -21,7 +21,11 @@ The column keys and the corresponding physical quantities are as follows:
 8. `PA`: the position angle of the "major axis" identified by PCA.  The angle is in degrees and has a value between 0 and 180, from the north to the east on the plane of the sky. (Notice that this is different from the "position angle" defined in `astrodendro`.) [deg.]
 9. `Area`: the exact area of the dendrogram feature projected onto the plane of the sky. [pc^2]
 10. `V_cen`: the intensity-weighted velocity centroid. [km/s]
-11. `V_RMS`: the intensity-weighted second moment of the velocity. [km/s]
+11. Two different ways to measure the velocity dispersion:
+
+	* `V_RMS`: the integrated intensity-weighted average of the width in the fits. [km/s]
+	* `V_RMS_dendro`: the velocity dispersion reported by `astrodendro`. [km/s]
+
 12. `V_disp`: the total velocity dispersion.  See Equation 3 in Friesen et al. (2016). [km/s]
 13. `V_disp_nt`: the non-thermal velocity dispersion. [km/s]
 14. `V_grad_abs`: the velocity gradient magnitude.  The value is derived assuming sin(i) = 1, same as in Goodman et al. (1993) and different from sin(i) = pi/4 in Dib et al. (2010).  This means that the values in these catalogs would be higher than the values derived by Dib et al. (2010) by a factor of ~ 1.27.  In the associated plots, the values are multiplied by 1.27 to be compared directly to the values in Dib et al. (2010).  Yen et al. (2011) used a specific value of i = 10 deg. for B335, based on independent interferometric observations (Hirano et al., 1998). [km/s/pc]
