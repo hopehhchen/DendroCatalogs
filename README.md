@@ -20,7 +20,7 @@ See Fig. 4 in Rosolowsky et al. (2008) for image representations of these three 
 * There are two versions of the setup parameters of the Dendrogram algorithm:
 
     1. The first setup has a minimum number of pixels set to 100 (`min_npix = 100`), with the rest of the setups chosen to be the same as used by Friesen et al. (2016).  This increase of `min_npix` from "one beam and two channels" (essentially 18 pixes) is used for the implementation of the three weighting schemes.  This is particularly critical in the extrapolation scheme, where the "shape" of the emission within the boundary is used to in the extrapolation.  Lack of enough sample points for the "shape" could pose a serious problem to the derived values in the "extrapolation" scheme.
-		
+
 		2. The second setup strictly follows the values used to identify the "features" in these catalogs are chosen to be the same as Friesen et al. (2016).
 
 * The velocity gradient fitting and the estimation of the specific angular momentum ("j") are based on Goodman et al. (1993).  The same methods are also used by Dib et al. (2010) and Yen et al. (2011), except different assumptions about the inclination.
@@ -38,6 +38,9 @@ The column keys and the corresponding physical quantities are as follows:
 
 1. `ID`: the ID assigned by the `astrodendro` package to each of the dendrogram feature.  This is consistent through all three catalogs (using each of the three weighting schemes) of the same region.
 2. `RA`: the right ascension of the intensity-weighted centroid. [deg.]
+
+    * Bijection: Centroids along the R.A. direction, weighted by the emission within the boundary of the dendrogram features.
+
 3. `Dec`: the declination of the intensity-weighted centroid. [deg.]
 4. `M`: the mass, based on the Herschel column density map and the projection of each dendrogram feature on the plane of the sky. [M_sun]
 5. `Axis_maj`: the intensity-weighted second moment along the "major axis" identified by PCA. [pc]
