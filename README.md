@@ -20,13 +20,10 @@ See Fig. 4 in Rosolowsky et al. (2008) for image representations of these three 
 * There are two versions of the setup parameters of the Dendrogram algorithm:
 
     1. The first setup has a minimum number of pixels set to 100 (`min_npix = 100`), with the rest of the setups chosen to be the same as used by Friesen et al. (2016).  This increase of `min_npix` from "one beam and two channels" (essentially 18 pixes) is used for the implementation of the three weighting schemes.  This is particularly critical in the extrapolation scheme, where the "shape" of the emission within the boundary is used to in the extrapolation.  Lack of enough sample points for the "shape" could pose a serious problem to the derived values in the "extrapolation" scheme.
-<<<<<<< HEAD
-
-		2. The second setup strictly follows the values used to identify the "features" in these catalogs are chosen to be the same as Friesen et al. (2016).
-=======
 
     2. The second setup strictly follows the values used to identify the "features" in these catalogs are chosen to be the same as Friesen et al. (2016).
->>>>>>> fd8fba7ad31aead3f2ebc8b67bf8f32ca13b0449
+
+    3. The second setup strictly follows the values used to identify the "features" in these catalogs are chosen to be the same as Friesen et al. (2016).
 
 * The velocity gradient fitting and the estimation of the specific angular momentum ("j") are based on Goodman et al. (1993).  The same methods are also used by Dib et al. (2010) and Yen et al. (2011), except different assumptions about the inclination.
 * The `astrodendro` package is used to identify features.  See http://dendrograms.org for details.
